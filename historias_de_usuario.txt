@@ -1,4 +1,4 @@
--Como agente de saúde pública eu quero um sistema (CANAL) automatizado de acompanhamento de prováveis casos do Covid 19 (pessoas que tiveram contato com infectados) para monitorar o avanço da doença
+﻿-Como agente de saúde pública eu quero um sistema (CANAL) automatizado de acompanhamento de prováveis casos do Covid 19 (pessoas que tiveram contato com infectados) para monitorar o avanço da doença
 
 -Como agente de saúde pública eu quero conhecer informações de indivíduos de provável contaminação (e contaminação confirmada) tais quais: Nome, Endereço, Cidade, Telefone Celular, Telefone Fixo, Idade, Sexo, Sintomas que apresenta e possíveis outros indivíduos com os quais tenha estabelecido contato para estabelecer potenciais clusters de disseminação do vírus e repassar essas informações às autoridades de saúde pública das possíveis localidades
 
