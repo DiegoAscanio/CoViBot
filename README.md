@@ -1,88 +1,36 @@
-# Blueprint/Boilerplate For Python Projects
+CoViBot
 
-[![Build, Test and Lint Action](https://github.com/MartinHeinz/python-project-blueprint/workflows/Build,%20Test,%20Lint/badge.svg)](https://github.com/MartinHeinz/python-project-blueprint/workflows/Build,%20Test,%20Lint/badge.svg)
-[![Push Action](https://github.com/MartinHeinz/python-project-blueprint/workflows/Push/badge.svg)](https://github.com/https://github.com/MartinHeinz/python-project-blueprint/workflows/Push/badge.svg)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/05c44c881bc10a706cbc/test_coverage)](https://codeclimate.com/github/MartinHeinz/python-project-blueprint/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/05c44c881bc10a706cbc/maintainability)](https://codeclimate.com/github/MartinHeinz/python-project-blueprint/maintainability)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=MartinHeinz_python-project-blueprint&metric=alert_status)](https://sonarcloud.io/dashboard?id=MartinHeinz_python-project-blueprint)
+Introdução:
 
-## Blog Posts - More Information About This Repo
+Este projeto é uma ferramenta automatizada para auxílio aos órgãos de saúde pública no acompanhamento de prováveis casos do Covid19.
 
-You can find more information about this project/repository and how to use it in following blog post:
+Segundo questionamento realizado por jornalistas da imprensa brasileira a funcionários do ministério da saúde, descobriu-se que os acompanhamentos de prováveis casos (pessoas que tiveram contato com infectados pela doença) têm sido realizados por humanos através de ligações telefônicas.
 
-- [Ultimate Setup for Your Next Python Project](https://towardsdatascience.com/ultimate-setup-for-your-next-python-project-179bda8a7c2c)
+Neste sentido, propõe-se a criação de um canal automatizado para realização de tais acompanhamentos, através de chatbots de questionários implementados nos principais apps de mensagens (Telegram, Whatsapp) e questionários telefônicos automatizados (URAs) através de APIs telefônicas como o Twilio.
 
-## Quick Start
-To use this repository as starter for your project you can run `configure_project.sh` script, which sets up all variables and file names. This way you can avoid configuring and renaming things yourself:
+Produto Mínimo Viável (MVP):
 
-```shell
-./configure_project.sh MODULE="coolproject" REGISTRY="docker.pkg.github.com/martinheinz/repo-name"
-```
+Sete histórias de usuário (disponíveis no arquivo historias_de_usuario.txt) foram concebidas para a construção de um produto mínimo viável que implementado esta ferramenta. Entretanto, nem tudo que ali está especificado deve ser desenvolvido para a construção do MVP.
 
-## Running
+A metodologia que inicialmente devo utilizar para a construção deste MVP está orientada para utilizar ferramentas que conheço de alguma forma. Entretanto, estou aberto a mudanças, a migrar este projeto para um grupo colaborativo no github e a delegar a tomada de decisões a respeito de tecnologias e implementação da ferramenta para desenvolvedores mais experientes que queiram colaborar com o projeto.
 
-### Using Python Interpreter
-```shell
-~ $ make run
-```
+Desta forma, elenco as tecnologias que pretendo usar no desenvolvimento do produto mínimo viável:
+-Ambiente de desenvolvimento virtualizado Vagrant (box será disponibilizada)
+-GNU/Linux Ubuntu 18.04 LTS server edition.
+-Servidor Web Apache2.
+-Ambiente Virtual (virtualenv) em python.
+-Framework de Desenvolvimento Web Python Django.
+-Biblioteca de templates django-bootstrap para o framework Django.
+-Fila de tarefas / mensagens assíncronas Python Celery.
+-Broker AMQP RabbitMQ (para ser utilizado para troca de mensagens necessárias ao celery).
+-Biblioteca de consumo de URLs Python Requests.
+-Bot de envio de mensagens do Telegram.
+-Controle de versionamento do código através de servidor git hospeado neste site github.
+-Bibliotecas de testes pytest e django-pytest para desenvolvimento do produto segundo a metodologia TDD (estou aprendendo agora).
+-Instância de produção AWS EC2 com GNU/Linux Ubuntu 18.04 LTS server edition.
 
-### Using Docker
+Observações:
 
-Development image:
-```console
-~ $ make build-dev
-~ $ docker images --filter "label=name=blueprint"
-REPOSITORY                                                             TAG                 IMAGE ID            CREATED             SIZE
-docker.pkg.github.com/martinheinz/python-project-blueprint/blueprint   3492a40-dirty       acf8d09acce4        28 seconds ago      967MB
-~ $ docker run acf8d09acce4
-Hello World...
-```
+Venho da administração de sistemas, não conheço separação de desenvolvimento em backend / frontend, por isso, vou desenvolver tudo acoplado. Entretanto, quero aprender e vou deixar que desenvolvedores que conheçam estas metodologias mudem a arquitetura do sistema se necessário. 
 
-Production (Distroless) image:
-```console
-~ $ make build-prod VERSION=0.0.5
-~ $ docker images --filter "label=version=0.0.5"
-REPOSITORY                                                             TAG                 IMAGE ID            CREATED             SIZE
-docker.pkg.github.com/martinheinz/python-project-blueprint/blueprint   0.0.5               65e6690d9edd        5 seconds ago       86.1MB
-~ $ docker run 65e6690d9edd
-Hello World...
-```
-
-## Testing
-
-Test are ran every time you build _dev_ or _prod_ image. You can also run tests using:
-
-```console
-~ $ make test
-```
-
-## Pushing to GitHub Package Registry
-
-```console
-~ $ docker login docker.pkg.github.com --username MartinHeinz
-Password: ...
-...
-Login Succeeded
-~ $ make push VERSION=0.0.5
-```
-
-## Cleaning
-
-Clean _Pytest_ and coverage cache/files:
-
-```console
-~ $ make clean
-```
-
-Clean _Docker_ images:
-
-```console
-~ $ make docker-clean
-```
-
-
-### Resources
-- <https://realpython.com/python-application-layouts/>
-- <https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6>
-- <https://github.com/navdeep-G/samplemod/blob/master/setup.py>
-- <https://github.com/GoogleContainerTools/distroless/blob/master/examples/python3/Dockerfile>
+Desta forma, como meus conhecimentos em metodologia backend / frontend são escassos e meu conhecimento sobre git é básicos, desenvolvedores mais experientes são mais do que bem vindos, são extremamante necessários ao projeto! A contribuição é aberta a todos! Quem quiser colaborar, "forke" o repositório ou abra issues aqui emitindo sugestões, dúvidas e relatórios de bugs. Peço que deem star no projeto (para que o github mostre a outros desenvolvedores) e divulguem a possíveis interessados!
