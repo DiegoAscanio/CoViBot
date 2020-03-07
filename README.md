@@ -10,7 +10,7 @@ Neste sentido, propõe-se a criação de um canal automatizado para realização
 
 ## Produto Mínimo Viável (MVP):
 
-Sete histórias de usuário (disponíveis no arquivo [historias_de_usuario.pdf](https://github.com/DiegoAscanio/CoViBot/blob/master/historias_de_usuario.pdf)) foram concebidas para a construção de um produto mínimo viável que implementa esta ferramenta. Entretanto, nem tudo que ali está especificado deve ser desenvolvido para a construção do MVP.
+Sete histórias de usuário (disponíveis no arquivo [historias_de_usuario.pdf](https://github.com/DiegoAscanio/CoViBot/blob/master/historias_de_usuario.pdf)) foram concebidas para construir um MVP do CoViBot. Entretanto, nem tudo que ali está especificado deve ser desenvolvido para a construção do MVP.
 
 A metodologia que inicialmente devo utilizar para a construção deste MVP está orientada para utilizar ferramentas que conheço de alguma forma. Entretanto, estou aberto a mudanças, a migrar este projeto para um grupo colaborativo no github e a delegar a tomada de decisões a respeito de tecnologias e implementação da ferramenta para desenvolvedores mais experientes que queiram colaborar com o projeto.
 
